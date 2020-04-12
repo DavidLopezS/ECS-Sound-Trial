@@ -65,129 +65,139 @@
     <Compile Include="Assets\Scripts\AudioHandlerSettings.cs" />
     <Compile Include="Assets\Scripts\AudioHandlerSystem.cs" />
     <Compile Include="Assets\Scripts\AudioMaster.cs" />
+    <Compile Include="Assets\Scripts\Dependencies\AudioComponents\ECSoundEmitterComponents.cs" />
+    <Compile Include="Assets\Scripts\Dependencies\AudioComponents\ECSoundFieldContributor.cs" />
+    <Compile Include="Assets\Scripts\Dependencies\AudioComponents\ECSoundFieldFinalMixComponent.cs" />
     <Compile Include="Assets\Scripts\Dependencies\AudioComponents\ECSoundPlayerComponent.cs" />
     <Compile Include="Assets\Scripts\Dependencies\AudioComponents\SamplePlayback.cs" />
     <Compile Include="Assets\Scripts\Dependencies\AudioComponents\SharedAudioClip.cs" />
     <Compile Include="Assets\Scripts\Dependencies\AudioNodes\ECSoundPlayerNode.cs" />
     <Compile Include="Assets\Scripts\Dependencies\AudioNodes\GainNode.cs" />
     <Compile Include="Assets\Scripts\Dependencies\AudioNodes\LimiterNode.cs" />
+    <Compile Include="Assets\Scripts\Dependencies\AudioNodes\StateVariableFilterNode.cs" />
     <Compile Include="Assets\Scripts\Dependencies\AudioSystem\AgentAudioSystem.cs" />
     <Compile Include="Assets\Scripts\Dependencies\AudioSystem\AudioManagerSystem.cs" />
+    <Compile Include="Assets\Scripts\Dependencies\AudioSystem\ECSoundFieldMixSystem.cs" />
+    <Compile Include="Assets\Scripts\Dependencies\AudioSystem\ECSoundSystem.cs" />
     <Compile Include="Assets\Scripts\Dependencies\AudioSystem\SamplePlaybackSystem.cs" />
     <Compile Include="Assets\Scripts\Dependencies\Utils\ChunkUtils.cs" />
+    <Compile Include="Assets\Scripts\Dependencies\Utils\ECSoundEmitterDefinitionAsset.cs" />
+    <Compile Include="Assets\Scripts\Dependencies\Utils\ECSoundPannerData.cs" />
+    <Compile Include="Assets\Scripts\ECSoundManager.cs" />
     <Compile Include="Assets\Scripts\EntityPosition.cs" />
+    <Compile Include="Assets\Scripts\GameObjectEntity.cs" />
     <Compile Include="Assets\Scripts\MainTest.cs" />
     <Compile Include="Assets\Scripts\MovementSpeedComponent.cs" />
     <Compile Include="Assets\Scripts\MovementSpeedSystem.cs" />
     <Compile Include="Assets\Scripts\RotationComponent.cs" />
     <Compile Include="Assets\Scripts\RotationSystem.cs" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>D:/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/david/Documents/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst">
-      <HintPath>D:/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
+      <HintPath>C:/Users/david/Documents/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>D:/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Users/david/Documents/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Entities.Properties">
-      <HintPath>D:/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Entities.Properties.dll</HintPath>
+      <HintPath>C:/Users/david/Documents/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Entities.Properties.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Jobs">
-      <HintPath>D:/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Jobs.dll</HintPath>
+      <HintPath>C:/Users/david/Documents/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Jobs.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Jobs.Editor">
-      <HintPath>D:/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Jobs.Editor.dll</HintPath>
+      <HintPath>C:/Users/david/Documents/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Jobs.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Entities.Editor">
-      <HintPath>D:/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Entities.Editor.dll</HintPath>
+      <HintPath>C:/Users/david/Documents/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Entities.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Entities.StaticTypeRegistry">
-      <HintPath>D:/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Entities.StaticTypeRegistry.dll</HintPath>
+      <HintPath>C:/Users/david/Documents/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Entities.StaticTypeRegistry.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Editor">
-      <HintPath>D:/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
+      <HintPath>C:/Users/david/Documents/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Collections">
-      <HintPath>D:/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Collections.dll</HintPath>
+      <HintPath>C:/Users/david/Documents/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Collections.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Scenes.Hybrid">
-      <HintPath>D:/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Scenes.Hybrid.dll</HintPath>
+      <HintPath>C:/Users/david/Documents/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Scenes.Hybrid.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Scenes.Editor">
-      <HintPath>D:/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Scenes.Editor.dll</HintPath>
+      <HintPath>C:/Users/david/Documents/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Scenes.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/david/Documents/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics.Extensions">
-      <HintPath>D:/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Mathematics.Extensions.dll</HintPath>
+      <HintPath>C:/Users/david/Documents/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Mathematics.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>D:/ECS-Sound-Trial/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/david/Documents/ECS-Sound-Trial/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics.Extensions.Hybrid">
-      <HintPath>D:/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Mathematics.Extensions.Hybrid.dll</HintPath>
+      <HintPath>C:/Users/david/Documents/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Mathematics.Extensions.Hybrid.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>D:/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/david/Documents/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rendering.Hybrid">
-      <HintPath>D:/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Rendering.Hybrid.dll</HintPath>
+      <HintPath>C:/Users/david/Documents/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Rendering.Hybrid.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Media.Utilities">
-      <HintPath>D:/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Media.Utilities.dll</HintPath>
+      <HintPath>C:/Users/david/Documents/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Media.Utilities.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Audio.DSPGraph">
-      <HintPath>D:/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Audio.DSPGraph.dll</HintPath>
+      <HintPath>C:/Users/david/Documents/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Audio.DSPGraph.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>D:/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/david/Documents/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Entities.BuildUtils">
-      <HintPath>D:/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Entities.BuildUtils.dll</HintPath>
+      <HintPath>C:/Users/david/Documents/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Entities.BuildUtils.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>D:/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Users/david/Documents/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Entities.Hybrid">
-      <HintPath>D:/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Entities.Hybrid.dll</HintPath>
+      <HintPath>C:/Users/david/Documents/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Entities.Hybrid.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics">
-      <HintPath>D:/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+      <HintPath>C:/Users/david/Documents/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Properties">
-      <HintPath>D:/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Properties.dll</HintPath>
+      <HintPath>C:/Users/david/Documents/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Properties.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>D:/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+      <HintPath>C:/Users/david/Documents/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>D:/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+      <HintPath>C:/Users/david/Documents/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Entities">
-      <HintPath>D:/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Entities.dll</HintPath>
+      <HintPath>C:/Users/david/Documents/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Entities.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Transforms">
-      <HintPath>D:/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Transforms.dll</HintPath>
+      <HintPath>C:/Users/david/Documents/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Transforms.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Transforms.Editor">
-      <HintPath>D:/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Transforms.Editor.dll</HintPath>
+      <HintPath>C:/Users/david/Documents/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Transforms.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics.Editor">
-      <HintPath>D:/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+      <HintPath>C:/Users/david/Documents/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/david/Documents/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>D:/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>C:/Users/david/Documents/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>D:/ECS-Sound-Trial/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/david/Documents/ECS-Sound-Trial/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Transforms.Hybrid">
-      <HintPath>D:/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Transforms.Hybrid.dll</HintPath>
+      <HintPath>C:/Users/david/Documents/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Transforms.Hybrid.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.9f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -367,19 +377,19 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.9f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>D:/ECS-Sound-Trial/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>C:/Users/david/Documents/ECS-Sound-Trial/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>D:/ECS-Sound-Trial/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/david/Documents/ECS-Sound-Trial/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>D:/ECS-Sound-Trial/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>C:/Users/david/Documents/ECS-Sound-Trial/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Unsafe">
-      <HintPath>D:/ECS-Sound-Trial/Library/PackageCache/com.unity.burst@1.2.3/Unity.Burst.Unsafe.dll</HintPath>
+      <HintPath>C:/Users/david/Documents/ECS-Sound-Trial/Library/PackageCache/com.unity.burst@1.2.3/Unity.Burst.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe">
-      <HintPath>D:/ECS-Sound-Trial/Library/PackageCache/com.unity.collections@0.1.1-preview/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <HintPath>C:/Users/david/Documents/ECS-Sound-Trial/Library/PackageCache/com.unity.collections@0.1.1-preview/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.9f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

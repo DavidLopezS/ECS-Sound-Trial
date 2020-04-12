@@ -147,5 +147,5 @@ public struct ECSoundPlayer : IComponentData
     internal DSPNode LPF;
 
     internal DSPConnection directMixConnection;
-    internal DSPConnection dirctLPFConnection;
+    internal DSPConnection directLPFConnection;
 }
