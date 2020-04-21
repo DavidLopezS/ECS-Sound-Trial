@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-using UnityEditor;
 using Unity.Entities;
 using MonoBehaviour = UnityEngine.MonoBehaviour;
 using GameObject = UnityEngine.GameObject;
@@ -118,7 +117,7 @@ public class GameObjectEntity : MonoBehaviour
             ComponentDataProxyBase componentData = com as ComponentDataProxyBase;
 
             if (componentData != null)
-                types[t++] = componentData.GetComponentType();
+                types[t++] = ComponentType.ReadWrite<ComponentDataProxyBase>();
             else if (includeGameObjectComponents && !(com is GameObjectEntity) && com != null)
                 types[t++] = com.GetType();
 
@@ -127,16 +126,17 @@ public class GameObjectEntity : MonoBehaviour
 
     static Entity CreateEntity(EntityManager entityManager, EntityArchetype archetype, IReadOnlyList<Component> components, IReadOnlyList<ComponentType> types)
     {
-        var entity = entityManager.CreateEntity(archetype);
-        var t = 0;
-        for (var i = 0; i != components.Count; i++)
+        Entity entity = entityManager.CreateEntity(archetype);
+        int t = 0;
+        for (int i = 0; i != components.Count; i++)
         {
             Component com = components[i];
             ComponentDataProxyBase componentDataProxy = com as ComponentDataProxyBase;
 
             if (componentDataProxy != null)
             {
-                componentDataProxy.UpdateComponentData(entityManager, entity);
+                //componentDataProxy.UpdateComponentData(entityManager, entity);
+                //entityManager.SetComponentData(entity, new ComponentDataProxyBase {  });
                 t++;
             }
             else if (!(com is GameObjectEntity) && com != null)
@@ -152,7 +152,10 @@ public class GameObjectEntity : MonoBehaviour
     {
         DefaultWorldInitialization.DefaultLazyEditModeInitialize();
         if (World.Active != null)
+        {
+            myEntityManager = World.Active.EntityManager;
             myEntity = AddToEntityManager(myEntityManager, gameObject);
+        }
     }
 
     protected virtual void OnEnable()
@@ -168,14 +171,14 @@ public class GameObjectEntity : MonoBehaviour
         myEntityManager = null;
         myEntity = Entity.Null;
     }
-
+    
     public static void CopyAllComponentsToEntity(GameObject gameObject, EntityManager entityManager, Entity entity)
     {
         foreach(ComponentDataProxyBase proxy in gameObject.GetComponents<ComponentDataProxyBase>())
         {
-            ComponentType type = proxy.GetComponentType();
+            ComponentType type = ComponentType.ReadWrite<ComponentDataProxyBase>();
             entityManager.AddComponent(entity, type);
-            proxy.UpdateComponentData(entityManager, entity);
+            //entityManager.SetComponentData(entity, proxy);
         }
     }
 }

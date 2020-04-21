@@ -65,7 +65,7 @@
     <Compile Include="Assets\Scripts\AudioHandlerSettings.cs" />
     <Compile Include="Assets\Scripts\AudioHandlerSystem.cs" />
     <Compile Include="Assets\Scripts\AudioMaster.cs" />
-    <Compile Include="Assets\Scripts\Dependencies\AudioComponents\ECSoundEmitterComponents.cs" />
+    <Compile Include="Assets\Scripts\Dependencies\AudioComponents\ECSoundEmitterComponent.cs" />
     <Compile Include="Assets\Scripts\Dependencies\AudioComponents\ECSoundFieldContributor.cs" />
     <Compile Include="Assets\Scripts\Dependencies\AudioComponents\ECSoundFieldFinalMixComponent.cs" />
     <Compile Include="Assets\Scripts\Dependencies\AudioComponents\ECSoundPlayerComponent.cs" />
@@ -83,6 +83,7 @@
     <Compile Include="Assets\Scripts\Dependencies\Utils\ChunkUtils.cs" />
     <Compile Include="Assets\Scripts\Dependencies\Utils\ECSoundEmitterDefinitionAsset.cs" />
     <Compile Include="Assets\Scripts\Dependencies\Utils\ECSoundPannerData.cs" />
+    <Compile Include="Assets\Scripts\Dependencies\Utils\EntityManagerExtesion.cs" />
     <Compile Include="Assets\Scripts\ECSoundManager.cs" />
     <Compile Include="Assets\Scripts\EntityPosition.cs" />
     <Compile Include="Assets\Scripts\GameObjectEntity.cs" />

@@ -17,6 +17,7 @@ public class ECSoundEmitterDefinitionAsset : ScriptableObject
 
     internal Entity GetEntity(EntityManager entityManager)
     {
+
         // Avoid error message "All entities passed to EntityManager must exist. One of the entities has already been destroyed or was never created." caused by calling ValidateEntity from EntityDataManager.Exists
         if (definitionEntity.Index >= entityManager.EntityCapacity)
             return Entity.Null;
@@ -35,7 +36,7 @@ public class ECSoundEmitterDefinitionAsset : ScriptableObject
     public void Reflect(EntityManager entityManager)
     {
         // These extra checks are needed to guard against MonoBehaviour destruction order that would otherwise cause errors in scenes like _SoundObjects
-        var entity = GetEntity(entityManager);
+        Entity entity = GetEntity(entityManager);
         if (entityManager != null && entity != Entity.Null && entityManager.HasComponent<ECSoundEmitterDefinition>(entity))
             entityManager.SetComponentData(entity, data);
     }
@@ -44,7 +45,7 @@ public class ECSoundEmitterDefinitionAsset : ScriptableObject
     [MenuItem("Assets/Create/Sound Emitter Definition Asset")]
     public static void CreateAsset()
     {
-        var asset = ScriptableObject.CreateInstance<ECSoundEmitterDefinitionAsset>();
+        ECSoundEmitterDefinitionAsset asset = ScriptableObject.CreateInstance<ECSoundEmitterDefinitionAsset>();
 
         asset.data.probability = 100.0f;
         asset.data.volume = 0.5f;

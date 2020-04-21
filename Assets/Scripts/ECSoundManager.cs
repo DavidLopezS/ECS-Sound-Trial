@@ -26,6 +26,8 @@ public class ECSoundManager : MonoBehaviour
     {
         world = World.Active;
 
+        entityManager = world.EntityManager;
+
         for (int i = 0; i < soundDefinitions.Length; i++)
             soundDefinitions[i].Reflect(entityManager);
 

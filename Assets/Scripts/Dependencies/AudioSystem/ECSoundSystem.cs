@@ -76,7 +76,7 @@ public class ECSoundSystem : ComponentSystem
                 Entity entity = soundFieldPlayerEntities[n];
                 ECSoundPlayer player = playerFromEntity[entity];
                 playerLPF[n].Dispose(block);
-                soundPlayerNodes[n].Dispose(block, allClips[n]);
+                soundPlayerNodes[n].Dispose(block);
             }
 
             for (int i = 0; i < soundFieldPlayerEntities.Length; ++i)
@@ -125,7 +125,7 @@ public class ECSoundSystem : ComponentSystem
     }
 
 
-    protected override void OnCreateManager()
+    protected override void OnCreate()
     {
         audioManager = World.GetOrCreateSystem<AudioManagerSystem>();
 
@@ -138,7 +138,7 @@ public class ECSoundSystem : ComponentSystem
             });
     }
 
-    protected override void OnDestroyManager()
+    protected override void OnDestroy()
     {
         DSPCommandBlock block = audioManager.audioGraph.CreateCommandBlock();
         AudioClip[] audioClipDestory = null;

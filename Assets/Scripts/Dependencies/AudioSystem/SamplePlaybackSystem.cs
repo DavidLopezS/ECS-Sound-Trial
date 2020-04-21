@@ -215,9 +215,8 @@ public class SamplePlaybackSystem : ComponentSystem
     //Function used to destroy the sample playback
     void DestroySamplePlayback(DSPCommandBlock block, State state)
     {
-        AudioClip audioClipDestroy = null;
 
-        state.samplePlayer.Dispose(block, audioClipDestroy);
+        state.samplePlayer.Dispose(block);
     }
 
 }

@@ -77,9 +77,11 @@ public struct ECSoundPlayerNode
     }
 
     //Funcion used to enact as disposer of the struct
-    public void Dispose(DSPCommandBlock block, AudioClip audioClipDestroy)
+    public void Dispose(DSPCommandBlock block)
     {
-        block.SetSampleProvider<ECSoundPlayerComponent.Parameters, ECSoundPlayerComponent.Providers, ECSoundPlayerComponent>(audioClipDestroy, mainDSPNode, ECSoundPlayerComponent.Providers.Sample);
+        //AudioClip audioClipDestroy;
+
+        //block.SetSampleProvider<ECSoundPlayerComponent.Parameters, ECSoundPlayerComponent.Providers, ECSoundPlayerComponent>(audioClipDestroy, mainDSPNode, ECSoundPlayerComponent.Providers.Sample);
 
         IDProvider = 0;
         SoundPlayerDisposeJob disposer = new SoundPlayerDisposeJob();
