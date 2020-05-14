@@ -62,41 +62,41 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\ScriptsFinal\Components\ECSoundEmitterComponent.cs" />
+    <Compile Include="Assets\Scripts\ScriptsFinal\Components\ECSoundFieldContributor.cs" />
+    <Compile Include="Assets\Scripts\ScriptsFinal\Components\ECSoundFieldFinalMixComponent.cs" />
+    <Compile Include="Assets\Scripts\ScriptsFinal\Components\ECSoundPlayerComponent.cs" />
+    <Compile Include="Assets\Scripts\ScriptsFinal\ECSoundManager.cs" />
+    <Compile Include="Assets\Scripts\ScriptsFinal\MainTest.cs" />
+    <Compile Include="Assets\Scripts\ScriptsFinal\MovementSpeedComponent.cs" />
+    <Compile Include="Assets\Scripts\ScriptsFinal\MovementSpeedSystem.cs" />
+    <Compile Include="Assets\Scripts\ScriptsFinal\Node\GainNode.cs" />
+    <Compile Include="Assets\Scripts\ScriptsFinal\Node\LimiterNode.cs" />
+    <Compile Include="Assets\Scripts\ScriptsFinal\Node\PlayClipNode.cs" />
+    <Compile Include="Assets\Scripts\ScriptsFinal\Node\StateVariableFilterNode.cs" />
     <Compile Include="Assets\Scripts\ScriptsFinal\PlayClipMain.cs" />
-    <Compile Include="Assets\Scripts\ScriptsFinal\PlayClipNode.cs" />
     <Compile Include="Assets\Scripts\ScriptsFinal\Resampler.cs" />
+    <Compile Include="Assets\Scripts\ScriptsFinal\RotationComponent.cs" />
+    <Compile Include="Assets\Scripts\ScriptsFinal\RotationSystem.cs" />
+    <Compile Include="Assets\Scripts\ScriptsFinal\Systems\AudioManagerSystem.cs" />
+    <Compile Include="Assets\Scripts\ScriptsFinal\Systems\ECSoundFieldMixSystem.cs" />
+    <Compile Include="Assets\Scripts\ScriptsFinal\Systems\ECSoundSystem.cs" />
+    <Compile Include="Assets\Scripts\ScriptsFinal\Utilities\ECSoundEmitterDefinitionAsset.cs" />
+    <Compile Include="Assets\Scripts\ScriptsFinal\Utilities\ECSoundPannerData.cs" />
     <Compile Include="Assets\Scripts\ScriptsTrial\AudioHandlerSettings.cs" />
     <Compile Include="Assets\Scripts\ScriptsTrial\AudioHandlerSystem.cs" />
     <Compile Include="Assets\Scripts\ScriptsTrial\AudioMaster.cs" />
-    <Compile Include="Assets\Scripts\ScriptsTrial\Dependencies\AudioComponents\ECSoundEmitterComponent.cs" />
-    <Compile Include="Assets\Scripts\ScriptsTrial\Dependencies\AudioComponents\ECSoundFieldContributor.cs" />
-    <Compile Include="Assets\Scripts\ScriptsTrial\Dependencies\AudioComponents\ECSoundFieldFinalMixComponent.cs" />
-    <Compile Include="Assets\Scripts\ScriptsTrial\Dependencies\AudioComponents\ECSoundPlayerComponent.cs" />
     <Compile Include="Assets\Scripts\ScriptsTrial\Dependencies\AudioComponents\SamplePlayback.cs" />
     <Compile Include="Assets\Scripts\ScriptsTrial\Dependencies\AudioComponents\SharedAudioClip.cs" />
     <Compile Include="Assets\Scripts\ScriptsTrial\Dependencies\AudioNodes\ECSoundPlayerNode.cs" />
-    <Compile Include="Assets\Scripts\ScriptsTrial\Dependencies\AudioNodes\GainNode.cs" />
-    <Compile Include="Assets\Scripts\ScriptsTrial\Dependencies\AudioNodes\LimiterNode.cs" />
     <Compile Include="Assets\Scripts\ScriptsTrial\Dependencies\AudioNodes\ScopeNode.cs" />
     <Compile Include="Assets\Scripts\ScriptsTrial\Dependencies\AudioNodes\SpectrumNode.cs" />
-    <Compile Include="Assets\Scripts\ScriptsTrial\Dependencies\AudioNodes\StateVariableFilterNode.cs" />
     <Compile Include="Assets\Scripts\ScriptsTrial\Dependencies\AudioSystem\AgentAudioSystem.cs" />
-    <Compile Include="Assets\Scripts\ScriptsTrial\Dependencies\AudioSystem\AudioManagerSystem.cs" />
-    <Compile Include="Assets\Scripts\ScriptsTrial\Dependencies\AudioSystem\ECSoundFieldMixSystem.cs" />
-    <Compile Include="Assets\Scripts\ScriptsTrial\Dependencies\AudioSystem\ECSoundSystem.cs" />
     <Compile Include="Assets\Scripts\ScriptsTrial\Dependencies\AudioSystem\SamplePlaybackSystem.cs" />
     <Compile Include="Assets\Scripts\ScriptsTrial\Dependencies\Utils\ChunkUtils.cs" />
-    <Compile Include="Assets\Scripts\ScriptsTrial\Dependencies\Utils\ECSoundEmitterDefinitionAsset.cs" />
-    <Compile Include="Assets\Scripts\ScriptsTrial\Dependencies\Utils\ECSoundPannerData.cs" />
     <Compile Include="Assets\Scripts\ScriptsTrial\Dependencies\Utils\EntityManagerExtesion.cs" />
-    <Compile Include="Assets\Scripts\ScriptsTrial\ECSoundManager.cs" />
     <Compile Include="Assets\Scripts\ScriptsTrial\EntityPosition.cs" />
     <Compile Include="Assets\Scripts\ScriptsTrial\GameObjectEntity.cs" />
-    <Compile Include="Assets\Scripts\ScriptsTrial\MainTest.cs" />
-    <Compile Include="Assets\Scripts\ScriptsTrial\MovementSpeedComponent.cs" />
-    <Compile Include="Assets\Scripts\ScriptsTrial\MovementSpeedSystem.cs" />
-    <Compile Include="Assets\Scripts\ScriptsTrial\RotationComponent.cs" />
-    <Compile Include="Assets\Scripts\ScriptsTrial\RotationSystem.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/david/Documents/ECS-Sound-Trial/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

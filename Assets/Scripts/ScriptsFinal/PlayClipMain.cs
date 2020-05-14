@@ -50,20 +50,6 @@ public class PlayClipMain : MonoBehaviour
 
         // We are done, fire off the command block atomically to the mixer thread.
         block.Complete();
-
-
-        using (DSPCommandBlock myBlock = my_Graph.CreateCommandBlock())
-        {
-            // Decide on playback rate here by taking the provider input rate and the output settings of the system
-            float resampleRate = (float)clip.frequency / AudioSettings.outputSampleRate;
-            myBlock.SetFloat<PlayClipNode.Parameters, PlayClipNode.SampleProviders, PlayClipNode>(my_Node, PlayClipNode.Parameters.Rate, resampleRate);
-
-            // Assign the sample provider to the slot of the node.
-            myBlock.SetSampleProvider<PlayClipNode.Parameters, PlayClipNode.SampleProviders, PlayClipNode>(clip, my_Node, PlayClipNode.SampleProviders.DefaultShot);
-
-            // Kick off playback. This will be done in a better way in the future.
-            myBlock.UpdateAudioKernel<PlayClipKernel, PlayClipNode.Parameters, PlayClipNode.SampleProviders, PlayClipNode>(new PlayClipKernel(), my_Node);
-        }
     }
 
     void Update()

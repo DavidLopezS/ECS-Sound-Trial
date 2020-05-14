@@ -198,6 +198,7 @@ GameObject:
   - component: {fileID: 662243743}
   - component: {fileID: 662243744}
   - component: {fileID: 662243745}
+  - component: {fileID: 662243746}
   m_Layer: 0
   m_Name: SoundTest
   m_TagString: Untagged
@@ -233,8 +234,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cubeMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   cubeMaterial: {fileID: 2100000, guid: 20b0cb38914814242bf7cdc8cc24d65b, type: 2}
-  numOfEntities: 10000
+  numOfEntities: 1000
 --- !u!114 &662243745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 662243742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00f09355f24b0c348b4c7634e9f10320, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  definition: {fileID: 11400000, guid: 41e4548324a7fc04aa03b10e389f5894, type: 2}
+--- !u!114 &662243746
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -246,7 +260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 720a2ae94baab4b429ddc73826b635b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: 1c975538b3af63e4dbda8f8bbcf22cc3, type: 3}
+  clip: {fileID: 8300000, guid: 60161d899bd751c4783f6ac0d919331e, type: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -432,6 +446,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1152714080}
   - component: {fileID: 1152714081}
+  - component: {fileID: 1152714079}
   m_Layer: 0
   m_Name: Enviroment Audio
   m_TagString: Untagged
@@ -439,6 +454,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1152714079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1152714078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 410d19bff30b44d45a9e3e3db790aada, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundDefinitions:
+  - {fileID: 11400000, guid: 41e4548324a7fc04aa03b10e389f5894, type: 2}
+  clips:
+  - {fileID: 8300000, guid: 60161d899bd751c4783f6ac0d919331e, type: 3}
 --- !u!4 &1152714080
 Transform:
   m_ObjectHideFlags: 0
